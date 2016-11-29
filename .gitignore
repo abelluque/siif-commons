@@ -1,0 +1,14 @@
+.settings/
+.project
+target/
+.classpath
+.metadata/
+.checkstyle
+.~lock.*
+*.swp
+.pmd
+.idea
+*.iml
+release.properties
+*.releaseBackup
+
