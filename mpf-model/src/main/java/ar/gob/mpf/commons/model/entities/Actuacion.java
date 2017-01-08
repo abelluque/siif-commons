@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 
 import ar.gob.mpf.commons.model.base.MpfEntity;
+import ar.gob.mpf.commons.model.entities.enums.EstadoActuacion;
 
 /**
  * 
@@ -15,30 +16,60 @@ import ar.gob.mpf.commons.model.base.MpfEntity;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Actuacion extends MpfEntity {
 
-	private static final long serialVersionUID = 628131420494768878L;
+	private static final long serialVersionUID = -5571608695069866965L;
 
-	private String tipoActuacion;
+	private TipoActuacion tipoActuacion;
+
+	private EstadoActuacion estado;
+
+	private String TextoActuacion;
+
+	private Documento documento;
+
+	private EstadoProcesal estadoProcesal;
 
 	public Actuacion() {
 		super();
 	}
 
-	public Actuacion(String tipoActuacion) {
-		super();
-		this.tipoActuacion = tipoActuacion;
-	}
-
-	public String getTipoActuacion() {
+	public TipoActuacion getTipoActuacion() {
 		return tipoActuacion;
 	}
 
-	public void setTipoActuacion(String tipoActuacion) {
+	public void setTipoActuacion(TipoActuacion tipoActuacion) {
 		this.tipoActuacion = tipoActuacion;
 	}
 
-	@Override
-	public String toString() {
-		return tipoActuacion;
+	public EstadoActuacion getEstado() {
+		return estado;
+	}
+
+	public void setEstado(EstadoActuacion estado) {
+		this.estado = estado;
+	}
+
+	public String getTextoActuacion() {
+		return TextoActuacion;
+	}
+
+	public void setTextoActuacion(String textoActuacion) {
+		TextoActuacion = textoActuacion;
+	}
+
+	public Documento getDocumento() {
+		return documento;
+	}
+
+	public void setDocumento(Documento documento) {
+		this.documento = documento;
+	}
+
+	public EstadoProcesal getEstadoProcesal() {
+		return estadoProcesal;
+	}
+
+	public void setEstadoProcesal(EstadoProcesal estadoProcesal) {
+		this.estadoProcesal = estadoProcesal;
 	}
 
 }
